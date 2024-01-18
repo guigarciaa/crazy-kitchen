@@ -5,8 +5,8 @@ resource "aws_lambda_function" "MyDemoAuthFunction" {
   runtime       = "nodejs12.x"     # Update this to your runtime
 
   # The filename of the lambda function. Upload a ZIP file containing your Lambda code to this path.
-  filename         = "../../projects/lambda-authorized/lambda.zip" 
-  source_code_hash = filebase64sha256("../../projects/lambda-authorized/lambda.zip")
+  filename         = "lambda.zip" 
+  source_code_hash = filebase64sha256("lambda.zip")
 }
 
 resource "aws_iam_role" "MyDemoRole" {
