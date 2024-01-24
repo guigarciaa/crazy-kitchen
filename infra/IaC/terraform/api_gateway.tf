@@ -26,7 +26,7 @@ resource "aws_api_gateway_integration" "MyDemoIntegration" {
   integration_http_method = "POST"
 }
 
-resource "aws_api_gateway_authorizer" "MyDemoAuthorizer" {
+ resource "aws_api_gateway_authorizer" "MyDemoAuthorizer" {
   name                   = "MyDemoAuthorizer"
   rest_api_id            = aws_api_gateway_rest_api.MyDemoAPI.id
   authorizer_uri         = aws_lambda_function.MyDemoAuthFunction.invoke_arn
